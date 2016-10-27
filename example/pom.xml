@@ -18,7 +18,7 @@
                 <artifactId>javadoc-swagger-maven-plugin</artifactId>
                 <version>1.0-SNAPSHOT</version>
                 <configuration>
-                    <basePath>charles.swagger.example</basePath>
+                    <basePath>charles.swagger</basePath>
                 </configuration>
             </plugin>
         </plugins>
