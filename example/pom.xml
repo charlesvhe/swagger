@@ -13,12 +13,26 @@
 
     <build>
         <plugins>
+            <!--<plugin>-->
+            <!--<groupId>charles</groupId>-->
+            <!--<artifactId>javadoc-swagger-maven-plugin</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+            <!--<configuration>-->
+            <!--<basePath>charles.swagger</basePath>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
             <plugin>
-                <groupId>charles</groupId>
-                <artifactId>javadoc-swagger-maven-plugin</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.4</version>
                 <configuration>
-                    <basePath>charles.swagger</basePath>
+                    <doclet>charles.swagger.mavenplugin.GenerateDoclet</doclet>
+                    <docletArtifact>
+                        <groupId>charles</groupId>
+                        <artifactId>javadoc-swagger-maven-plugin</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                    </docletArtifact>
+                    <useStandardDocletOptions>false</useStandardDocletOptions>
                 </configuration>
             </plugin>
         </plugins>
